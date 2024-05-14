@@ -160,7 +160,7 @@ class ProductController extends Controller
                     $get_name_image = $image->getClientOriginalName();
                     $name_image = current(explode('.',$get_name_image));
                     $new_image = $name_image.rand(0,99).'.'.$image->getClientOriginalExtension();
-                    $image->storeAs('public/kidoldash/images/product',$new_image);
+                    $image->storeAs('public/watchshopdash/images/product',$new_image);
                     $images[] = $new_image;
                 }
 
@@ -224,14 +224,14 @@ class ProductController extends Controller
                         $get_name_image = $image->getClientOriginalName();
                         $name_image = current(explode('.',$get_name_image));
                         $new_image = $name_image.rand(0,99).'.'.$image->getClientOriginalExtension();
-                        $image->storeAs('public/kidoldash/images/product',$new_image);
+                        $image->storeAs('public/watchshopdash/images/product',$new_image);
                         $images[] = $new_image;
                     }
 
                     // Xoá hình cũ trong csdl và trong folder 
                     $get_old_mg = ProductImage::where('idProduct', $idProduct)->first();
                     foreach(json_decode($get_old_mg->ImageName) as $old_img){
-                        Storage::delete('public/kidoldash/images/product/'.$old_img);
+                        Storage::delete('public/watchshopdash/images/product/'.$old_img);
                     }
                     ProductImage::where('idProduct', $idProduct)->delete();
                     
@@ -248,7 +248,7 @@ class ProductController extends Controller
         public function delete_product($idProduct){
             $get_old_mg = ProductImage::where('idProduct', $idProduct)->first();
             foreach(json_decode($get_old_mg->ImageName) as $old_img){
-                Storage::delete('public/kidoldash/images/product/'.$old_img);
+                Storage::delete('public/watchshopdash/images/product/'.$old_img);
             }
             Product::find($idProduct)->delete();
             return redirect()->back();
@@ -386,7 +386,20 @@ class ProductController extends Controller
             $this_pro = Product::where('ProductSlug',$ProductSlug)->first();
             
             if($this_pro->StatusPro != '0'){
+                $viewer = new Viewer();
                 
+                if(Session::get('idCustomer') == '') $idCustomer = session()->getId();
+                else $idCustomer = (string)Session::get('idCustomer');
+                
+                $viewer->idCustomer = $idCustomer;
+                $viewer->idProduct = $this_pro->idProduct;
+                
+                if(Viewer::where('idCustomer',$idCustomer)->where('idProduct',$this_pro->idProduct)->count() == 0){
+                    if(Viewer::where('idCustomer',$idCustomer)->count() >= 3){
+                        $idView = Viewer::where('idCustomer',$idCustomer)->orderBy('idView','asc')->take(1)->delete();
+                        $viewer->save();
+                    }else $viewer->save();
+                }
 
                 $idBrand = $this_pro->idBrand;
                 $idCategory = $this_pro->idCategory;
@@ -492,7 +505,7 @@ class ProductController extends Controller
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="quick-view-image">
-                                                <img src="public/storage/kidoldash/images/product/'.$image.'" alt="">
+                                                <img src="public/storage/watchshopdash/images/product/'.$image.'" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -557,7 +570,7 @@ class ProductController extends Controller
                                 $image = json_decode($pd->ImageName)[0];
             $output .= '    <div class="product-item col-md-3 select-pd" id="product-item-'.$pd->idProduct.'" data-id="'.$pd->idProduct.'">
                                 <div class="product-image-compare mb-3" id="product-image-'.$pd->idProduct.'">
-                                    <label for="chk-pd-'.$pd->idProduct.'"><img src="public/storage/kidoldash/images/product/'.$image.'" class="rounded w-100 img-fluid"></label>       
+                                    <label for="chk-pd-'.$pd->idProduct.'"><img src="public/storage/watchshopdash/images/product/'.$image.'" class="rounded w-100 img-fluid"></label>       
                                     <div class="product-title-compare">
                                         <div class="product-name-compare text-center">
                                             <input type="checkbox" class="checkstatus d-none" id="chk-pd-'.$pd->idProduct.'" name="chk_product[]" value="'.$pd->idProduct.'" data-id="'.$pd->idProduct.'">
@@ -604,7 +617,7 @@ class ProductController extends Controller
                 $image = json_decode($pd->ImageName)[0];
             $output .= '<div class="product-item col-md-3 select-pd" id="product-item-'.$pd->idProduct.'" data-id="'.$pd->idProduct.'">
                             <div class="product-image-compare mb-3" id="product-image-'.$pd->idProduct.'">
-                                <label for="chk-pd-'.$pd->idProduct.'"><img src="/public/storage/kidoldash/images/product/'.$image.'" class="rounded w-100 img-fluid"></label>       
+                                <label for="chk-pd-'.$pd->idProduct.'"><img src="/public/storage/watchshopdash/images/product/'.$image.'" class="rounded w-100 img-fluid"></label>       
                                 <div class="product-title-compare">
                                     <div class="product-name-compare text-center">
                                         <input type="checkbox" class="checkstatus d-none" id="chk-pd-'.$pd->idProduct.'" name="chk_product[]" value="'.$pd->idProduct.'" data-id="'.$pd->idProduct.'">
@@ -675,9 +688,9 @@ class ProductController extends Controller
                     $image = json_decode($pd->ImageName)[0];
                     $output .='
                     <li class="search-product-item d-flex align-items-center">
-                        <a class="search-product-text" href="/../kidolshop/shop-single/'.$pd->ProductSlug.'">
+                        <a class="search-product-text" href="/../watchshop/shop-single/'.$pd->ProductSlug.'">
                             <div class="d-flex align-items-center">
-                                <img width="50" height="50" src="/../kidolshop/public/storage/kidoldash/images/product/'.$image.'" alt="">
+                                <img width="50" height="50" src="/../watchshop/public/storage/watchshopdash/images/product/'.$image.'" alt="">
                                 <span class="two-line ml-2">'.$pd->ProductName.'</span>
                             </div>
                         </a>

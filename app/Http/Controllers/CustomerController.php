@@ -8,7 +8,6 @@ use App\Models\Brand;
 use App\Models\Customer;
 use App\Models\AddressCustomer;
 use App\Models\WishList;
-use App\Models\Compare;
 use App\Models\Product;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Session;
@@ -72,12 +71,12 @@ class CustomerController extends Controller
         }
 
         // Chuyển đến trang so sánh sản phẩm
-        public function compare(){
+        public function compare(Request $request){
             $list_category = Category::get();
             $list_brand = Brand::get();
-            $list_compare = Compare::join('product','product.idProduct','=','compare.idProduct')
-                ->join('productimage','productimage.idProduct','compare.idProduct')
-                ->where('session_id',session()->getId())->get();
+            $products = explode(",",$request->product);
+            $list_compare = Product::join('productimage','productimage.idProduct','product.idProduct')
+                ->whereIn('product.idProduct', $products)->get();
 
             return view("shop.customer.compare")->with(compact('list_category','list_brand','list_compare'));
         }
@@ -139,12 +138,12 @@ class CustomerController extends Controller
                 $get_name_image = $get_image->getClientOriginalName();
                 $name_image = current(explode('.',$get_name_image));
                 $new_image = $name_image.rand(0,99).'.'.$get_image->getClientOriginalExtension();
-                $get_image->storeAs('public/kidoldash/images/customer',$new_image);
+                $get_image->storeAs('public/watchshopdash/images/customer',$new_image);
                 $customer->Avatar = $new_image; 
                 Session::put('AvatarCus', $new_image);
     
                 $get_old_img = Customer::where('idCustomer', Session::get('idCustomer'))->first();
-                Storage::delete('public/kidoldash/images/customer/'.$get_old_img->Avatar);
+                Storage::delete('public/watchshopdash/images/customer/'.$get_old_img->Avatar);
             }
 
             $customer->save();
@@ -239,29 +238,6 @@ class CustomerController extends Controller
         public function delete_wish($idWish){
             $this->checkLogin();
             WishList::destroy($idWish);
-        }
-
-        // So sánh sản phẩm
-        public function submit_compare(Request $request){
-            $data = $request->all();
-            $session_id = session()->getId();
-
-            Compare::where('session_id',$session_id)->delete();
-
-            $idProduct[] = $data['idProduct'];
-            foreach($data['chk_product'] as $chk){
-                $idProduct[] = $chk;
-            }
-
-            foreach($idProduct as $id){
-                $data_all = array(
-                    'idProduct' => $id,
-                    'session_id' => $session_id,
-                    'created_at' => now(),
-                    'updated_at' => now()
-                );
-                Compare::insert($data_all);
-            }
         }
 
         // Tìm kiếm sản phẩm

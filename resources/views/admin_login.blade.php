@@ -4,15 +4,15 @@
   <head>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>KidolDash | Login</title>
+      <title>watchshopdash | Login</title>
       
       <!-- Favicon -->
-      <link rel="shortcut icon" href="{{asset('public/kidoldash/images/favicon.ico')}}" />
-      <link rel="stylesheet" href="{{asset('public/kidoldash/css/backend-plugin.min.css')}}">
-      <link rel="stylesheet" href="{{asset('public/kidoldash/css/backend.css?v=1.0.0')}}">
-      <link rel="stylesheet" href="{{asset('public/kidoldash/vendor/@fortawesome/fontawesome-free/css/all.min.css')}}">
-      <link rel="stylesheet" href="{{asset('public/kidoldash/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css')}}">
-      <link rel="stylesheet" href="{{asset('public/kidoldash/vendor/remixicon/fonts/remixicon.css')}}">  </head>
+      <link rel="shortcut icon" href="{{asset('public/watchshopdash/images/favicon.ico')}}" />
+      <link rel="stylesheet" href="{{asset('public/watchshopdash/css/backend-plugin.min.css')}}">
+      <link rel="stylesheet" href="{{asset('public/watchshopdash/css/backend.css?v=1.0.0')}}">
+      <link rel="stylesheet" href="{{asset('public/watchshopdash/vendor/@fortawesome/fontawesome-free/css/all.min.css')}}">
+      <link rel="stylesheet" href="{{asset('public/watchshopdash/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css')}}">
+      <link rel="stylesheet" href="{{asset('public/watchshopdash/vendor/remixicon/fonts/remixicon.css')}}">  </head>
   <body class=" ">
     <!-- loader Start -->
     <div id="loading">
@@ -62,7 +62,7 @@
                               </div>
                            </div>
                            <div class="col-lg-5 content-right">
-                              <img src="public/kidoldash/images/login/01.png" class="img-fluid image-right" alt="">
+                              <img src="public/watchshopdash/images/login/01.png" class="img-fluid image-right" alt="">
                            </div>
                         </div>
                      </div>
@@ -74,20 +74,20 @@
       </div>
     
     <!-- Backend Bundle JavaScript -->
-    <script src="{{asset('public/kidoldash/js/backend-bundle.min.js')}}"></script>
+    <script src="{{asset('public/watchshopdash/js/backend-bundle.min.js')}}"></script>
     
     <!-- Table Treeview JavaScript -->
-    <script src="{{asset('public/kidoldash/js/table-treeview.js')}}"></script>
+    <script src="{{asset('public/watchshopdash/js/table-treeview.js')}}"></script>
     
     <!-- Chart Custom JavaScript -->
-    <script src="{{asset('public/kidoldash/js/customizer.js')}}"></script>
+    <script src="{{asset('public/watchshopdash/js/customizer.js')}}"></script>
     
     <!-- Chart Custom JavaScript -->
-    <script async src="{{asset('public/kidoldash/js/chart-custom.js')}}"></script>
+    <script async src="{{asset('public/watchshopdash/js/chart-custom.js')}}"></script>
     
     <!-- app JavaScript -->
-    <script src="{{asset('public/kidoldash/js/app.js')}}"></script>
+    <script src="{{asset('public/watchshopdash/js/app.js')}}"></script>
 
-    <script src="{{asset('public/kidoldash/js/form-validate.js')}}"></script>
+    <script src="{{asset('public/watchshopdash/js/form-validate.js')}}"></script>
   </body>
 </html>

@@ -110,7 +110,7 @@
                                     <div class="d-flex flex-wrap" id="image-list">
                                         @foreach(json_decode($product->ImageName) as $key => $image)
                                         <div id="image-item-{{$key}}" class="image-item">
-                                            <img src="{{asset('public/storage/kidoldash/images/product/'.$image)}}" class="img-fluid rounded avatar-100 mr-3 mt-2">
+                                            <img src="{{asset('public/storage/watchshopdash/images/product/'.$image)}}" class="img-fluid rounded avatar-100 mr-3 mt-2">
                                             <!-- <span class="dlt-item"><span class="dlt-icon">x</span></span> -->
                                         </div>
                                         @endforeach

@@ -6,7 +6,7 @@
 <form method="POST" action="{{URL::to('/submit-payment')}}" id="payment-form">
     @csrf
 <!--Page Banner Start-->
-<div class="page-banner" style="background-image: url(public/kidolshop/images/banner/banner-shop.png);">
+<div class="page-banner" style="background-image: url(public/watchshop/images/banner/banner-shop.png);">
     <div class="container">
         <div class="page-banner-content text-center">
             <h2 class="title">Thanh toán</h2>
@@ -53,7 +53,7 @@
                     <tr class="product-item">
                         <?php $image = json_decode($pd_cart->ImageName)[0]; ?>
                         <td class="image">
-                            <a href="{{URL::to('/shop-single/'.$pd_cart->ProductSlug)}}"><img src="{{asset('public/storage/kidoldash/images/product/'.$image)}}" alt=""></a>
+                            <a href="{{URL::to('/shop-single/'.$pd_cart->ProductSlug)}}"><img src="{{asset('public/storage/watchshopdash/images/product/'.$image)}}" alt=""></a>
                         </td>
                         <td class="product">
                             <a href="{{URL::to('/shop-single/'.$pd_cart->ProductSlug)}}">{{$pd_cart->ProductName}}</a>
@@ -91,7 +91,27 @@
                     <div class="text-primary alert-voucher"></div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 container__address-content">
+                <div class="container__address-content-hd">
+                    <i class="container__address-content-hd-icon fa fa-money"></i>
+                    <div>Phương thức thanh toán</div>
+                </div>
+                <ul class="shipping-list checkout-payment">
+                    <li class="cus-radio">
+                        <input type="radio" name="checkout" value="cash" id="cash" checked>
+                        <label for="cash">
+                            <span>Thanh toán khi nhận hàng</span>
+                        </label>
+                    </li>
+                    <li class="cus-radio payment-radio">
+                        <input type="radio" name="checkout" value="vnpay" id="vnpay" >
+                        <label for="vnpay">
+                            <span>VNPay</span>
+                        </label>
+                    </li>
+                </ul>                   
+            </div>
+            <div class="col-lg-12">
                 <div class="cart-totals shop-single-content">
                     <div class="cart-title">
                         <h4 class="title">Tổng giỏ hàng</h4>
@@ -125,39 +145,13 @@
                             </tbody>
                         </table>
                     </div>
-                    <!-- <div class="container__address-content">
-                        <div class="container__address-content-hd">
-                            <i class="container__address-content-hd-icon fa fa-money"></i>
-                            <div>Phương thức thanh toán</div>
-                        </div>
-                        <ul class="shipping-list checkout-payment">
-                            <li class="cus-radio">
-                                <input type="radio" name="checkout" value="cash" onclick="removeDiv()" id="cash" checked>
-                                <label for="cash">
-                                    <span>Thanh toán khi nhận hàng</span>
-                                </label>
-                            </li>
-                            <li class="cus-radio payment-radio">
-                                <input type="radio" name="checkout" onclick="showMomoModal()" value="momo" id="momo" >
-                                <label for="momo">
-                                    <span>Momo</span>
-                                </label>
-                            </li>
-                            <li class="cus-radio payment-radio">
-                                <input type="radio" name="checkout" onclick="showZaloModal()" value="zalo" id="zalo" >
-                                <label for="zalo">
-                                    <span>Zalo Pay</span>
-                                </label>
-                            </li>
-                        </ul>                   
-                    </div> -->
                     <div class="dynamic-checkout-button disabled ">
                         <div class="checkout-checkbox">
                             <input type="checkbox" id="disabled">
                             <label for="disabled"><span></span> Tôi đồng ý với các điều khoản và điều kiện </label>
                         </div>    
                         <div class="cart-total-btn checkout-btn">
-                            <button type="submit" class="btn btn-primary btn-block btnorder" style="max-width:100%;">Đặt hàng</button>
+                            <button type="submit" name="redirect" class="btn btn-primary btn-block btnorder" style="max-width:100%;">Đặt hàng</button>
                         </div>
                     </div>
                 </div>
@@ -240,7 +234,7 @@
     </div>
 </form>
 
-<script src="{{asset('public/kidolshop/js/jquery.validate.min.js')}}"></script>
+<script src="{{asset('public/watchshop/js/jquery.validate.min.js')}}"></script>
 
 <script>
     $(document).ready(function(){  

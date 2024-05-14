@@ -47,10 +47,10 @@
                             <tr>
                                 @if($staff->Avatar)
                                 <td class="text-center"><img class="rounded img-fluid avatar-50"
-                                        src="public/storage/kidoldash/images/user/{{$staff->Avatar}}" alt="profile"></td>
+                                        src="public/storage/watchshopdash/images/user/{{$staff->Avatar}}" alt="profile"></td>
                                 @else
                                 <td class="text-center"><img class="rounded img-fluid avatar-50"
-                                        src="public/kidoldash/images/user/12.jpg" alt="profile"></td>
+                                        src="public/watchshopdash/images/user/12.jpg" alt="profile"></td>
                                 @endif
                                 <td>{{$staff->AdminUser}}</td>
                                 <td>{{$staff->AdminName}}</td>

@@ -3,7 +3,7 @@
 
 
 <!--Page Banner Start-->
-<div class="page-banner" style="background-image: url(public/kidolshop/images/banner/banner-shop.png);">
+<div class="page-banner" style="background-image: url(public/watchshop/images/banner/banner-shop.png);">
     <div class="container">
         <div class="page-banner-content text-center">
             <h2 class="title">Cửa Hàng</h2>
@@ -24,7 +24,7 @@
         <div class="row flex-row-reverse">
             <div class="col-lg-9">
                 <!-- <div class="shop-banner">
-                    <a href="#"><img src="{{asset('public/kidolshop/images/banner/banner.png')}}" alt=""></a>
+                    <a href="#"><img src="{{asset('public/watchshop/images/banner/banner.png')}}" alt=""></a>
                 </div> -->
                 <!--Shop Top Bar Start-->
                 <div class="shop-top-bar d-sm-flex align-items-center justify-content-between mt-3">
@@ -94,7 +94,7 @@
                                     <div class="product-image">
                                         <?php $image = json_decode($pd->ImageName)[0];?>
                                         <a href="{{URL::to('/shop-single/'.$pd->ProductSlug)}}">
-                                            <img src="{{asset('public/storage/kidoldash/images/product/'.$image)}}" alt="">
+                                            <img src="{{asset('public/storage/watchshopdash/images/product/'.$image)}}" alt="">
                                         </a>
 
                                         <?php
@@ -151,7 +151,7 @@
                             <div class="product-image">
                                 <?php $image = json_decode($pd->ImageName)[0];?>
                                 <a href="{{URL::to('/shop-single/'.$pd->ProductSlug)}}">
-                                    <img src="{{asset('public/storage/kidoldash/images/product/'.$image)}}" alt="">
+                                    <img src="{{asset('public/storage/watchshopdash/images/product/'.$image)}}" alt="">
                                 </a>
 
                                 <?php
@@ -326,7 +326,7 @@
 
                     <!--Sidebar Size Start-->
                     <div class="sidebar-banner">
-                        <a href="#"><img src="public/kidolshop/images/banner-top-pd.png" alt=""></a>
+                        <a href="#"><img src="public/watchshop/images/banner-top-pd.png" alt=""></a>
                     </div>
                     <!--Sidebar Size End-->
 
@@ -342,7 +342,7 @@
                                     <div class="product-image">
                                         <?php $image = json_decode($top_pd->ImageName)[0];?>
                                         <a href="{{URL::to('/shop-single/'.$top_pd->ProductSlug)}}">
-                                            <img src="{{asset('public/storage/kidoldash/images/product/'.$image)}}" alt="">
+                                            <img src="{{asset('public/storage/watchshopdash/images/product/'.$image)}}" alt="">
                                         </a>
                                     </div>
                                     <div class="product-content">

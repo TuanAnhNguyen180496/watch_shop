@@ -2059,13 +2059,13 @@ blockquote p {
 /*  3.1 - Header Top CSS
 /*----------------------------------------*/
 .top-notification-bar {
-  -webkit-background: -webkit-gradient(linear, left top, right top, from(#fff), to(#f379a7));
-  -webkit-background: -webkit-linear-gradient(left, #fff 0%, #f379a7 100%);
-  -moz-background: linear-gradient(to right, #fff 0%, #f379a7 100%);
-  -ms-background: linear-gradient(to right, #fff 0%, #f379a7 100%);
-  -o-background: -o-linear-gradient(left,#fff 0%, #f379a7 100%);
-  background: -webkit-gradient(linear, left top, right top, from(#fff), to(#f379a7));
-  background: linear-gradient(to right, #fff 0%, #f379a7 100%);
+  -webkit-background: -webkit-gradient(linear, left top, right top, from(#fff), to(#a4aecf));
+  -webkit-background: -webkit-linear-gradient(left, #fff 0%, #a4aecf 100%);
+  -moz-background: linear-gradient(to right, #fff 0%, #a4aecf 100%);
+  -ms-background: linear-gradient(to right, #fff 0%, #a4aecf 100%);
+  -o-background: -o-linear-gradient(left,#fff 0%, #a4aecf 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#fff), to(#a4aecf));
+  background: linear-gradient(to right, #fff 0%, #a4aecf 100%);
   position: relative;
   padding: 10px 0;
 }
@@ -7481,7 +7481,6 @@ blockquote p {
 
 .container__address-content {
   padding: 28px 30px 24px;
-  border-bottom: 1px solid #efefef;
 }
 
 .container__address-content-hd {
@@ -9873,4 +9872,16 @@ input[type=checkbox] {
   height: 20px;
   line-height: 20px;
   text-align: center;
+}
+
+.paid_tag {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-30deg);
+  border: 5px solid #f379a7;
+  border-radius: 5px;
+  right: 20%;
+  top: 25%;
 }

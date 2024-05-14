@@ -2,7 +2,7 @@
 @section('content')
 
 <!--Page Banner Start-->
-<div class="page-banner" style="background-image: url(public/kidolshop/images/oso.png);">
+<div class="page-banner" style="background-image: url(public/watchshop/images/oso.png);">
     <div class="container">
         <div class="page-banner-content text-center">
             <h2 class="title">Đơn đặt hàng</h2>
@@ -93,7 +93,7 @@
                                             <td>{{number_format($bill->TotalBill,0,',','.')}}đ</td>
                                             <td class="d-flex justify-content-center">
                                                 <a class="view-hover h3 mr-2" href="{{URL::to('/ordered-info/'.$bill->idBill)}}" data-toggle="tooltip" data-placement="top" title="" data-original-title="Xem chi tiết"><i class="fa fa-eye"></i></a>
-                                                <a class="view-hover h3 ml-2" id="delete-bill-btn" data-toggle="modal" data-target="#modal-delete-bill" data-id="{{$bill->idBill}}"><i class="fa fa-trash"></i></a>
+                                                <a class="view-hover h3 ml-2 delete-bill-btn" data-toggle="modal" data-target="#modal-delete-bill" data-id="{{$bill->idBill}}"><i class="fa fa-trash"></i></a>
                                             </td>
                                         </tr>
                                         @endforeach
@@ -137,7 +137,7 @@
         $('body').tooltip({selector: '[data-toggle="tooltip"]'});
         APP_URL = '{{url('/')}}' ;
 
-        $("#delete-bill-btn").on("click", function() {
+        $(".delete-bill-btn").on("click", function() {
             var idBill = $(this).data("id");
             console.log(idBill);
             $(".content-delete").html("Bạn có muốn hủy đơn hàng #" +idBill+ " không?");

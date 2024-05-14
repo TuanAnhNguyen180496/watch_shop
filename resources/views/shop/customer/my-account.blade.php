@@ -2,7 +2,7 @@
 @section('content')
 
 <!--Page Banner Start-->
-<div class="page-banner" style="background-image: url(public/kidolshop/images/oso.png);">
+<div class="page-banner" style="background-image: url(public/watchshop/images/oso.png);">
     <div class="container">
         <div class="page-banner-content text-center">
             <h2 class="title">Tài khoản của tôi</h2>
@@ -70,8 +70,8 @@
                                                     <div class="profile-img-edit">
                                                         <div class="crm-profile-img-edit">
                                                             @if($customer->Avatar != null)
-                                                            <img class="crm-profile-pic rounded-circle avatar-100 replace-avt" src="public/storage/kidoldash/images/customer/{{$customer->Avatar}}">
-                                                            @else <img class="crm-profile-pic rounded-circle avatar-100 replace-avt" src="public/kidoldash/images/user/1.png"> @endif
+                                                            <img class="crm-profile-pic rounded-circle avatar-100 replace-avt" src="public/storage/watchshopdash/images/customer/{{$customer->Avatar}}">
+                                                            @else <img class="crm-profile-pic rounded-circle avatar-100 replace-avt" src="public/watchshopdash/images/user/1.png"> @endif
                                                             <div class="crm-p-image bg-primary">
                                                                 <label for="Avatar" style="cursor:pointer;"><span class="ti-pencil upload-button d-block"></span></label>
                                                                 <input type="file" class="file-upload" id="Avatar" name="Avatar" onchange="loadPreview(this)" accept="image/*">
@@ -98,7 +98,7 @@
 </div>
 <!--My Account End-->
 
-<script src="{{asset('public/kidolshop/js/jquery.validate.min.js')}}"></script>
+<script src="{{asset('public/watchshop/js/jquery.validate.min.js')}}"></script>
 
 <script>
     window.scrollBy(0,300);

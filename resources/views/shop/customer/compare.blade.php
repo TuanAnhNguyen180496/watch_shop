@@ -2,7 +2,7 @@
 @section('content')
 
 <!--Page Banner Start-->
-<div class="page-banner" style="background-image: url(public/kidolshop/images/oso.png);">
+<div class="page-banner" style="background-image: url(public/watchshop/images/oso.png);">
     <div class="container">
         <div class="page-banner-content text-center">
             <h2 class="title">So Sánh Sản Phẩm</h2>
@@ -29,7 +29,7 @@
                         <td style="width:30%; vertical-align:unset;">
                             <div class="product-image-title">
                                 <?php $image = json_decode($compare->ImageName)[0];?>
-                                <a class="product-image" href="{{URL::to('/shop-single/'.$compare->ProductSlug)}}"><img src="{{asset('public/storage/kidoldash/images/product/'.$image)}}" alt="product"></a>
+                                <a class="product-image" href="{{URL::to('/shop-single/'.$compare->ProductSlug)}}"><img src="{{asset('public/storage/watchshopdash/images/product/'.$image)}}" alt="product"></a>
                                 <h5 class="title"><a class="view-hover" href="{{URL::to('/shop-single/'.$compare->ProductSlug)}}">{{$compare->ProductName}}</a></h5>
                             </div>
                         </td>

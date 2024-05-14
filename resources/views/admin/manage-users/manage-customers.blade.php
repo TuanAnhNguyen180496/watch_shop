@@ -30,10 +30,10 @@
                             <tr>
                                 @if($customer->Avatar)
                                 <td class="text-center"><img class="rounded img-fluid avatar-40"
-                                        src="public/kidolshop/images/customer/{{$customer->Avatar}}" alt="profile"></td>
+                                        src="public/watchshop/images/customer/{{$customer->Avatar}}" alt="profile"></td>
                                 @else
                                 <td class="text-center"><img class="rounded img-fluid avatar-40"
-                                        src="public/kidolshop/images/customer/1.png" alt="profile"></td>
+                                        src="public/watchshop/images/customer/1.png" alt="profile"></td>
                                 @endif
                                 <td>{{$customer->username}}</td>
                                 <td>{{$customer->CustomerName}}</td>

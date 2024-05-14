@@ -2,7 +2,7 @@
 @section('content')
 
 <!--Page Banner Start-->
-<div class="page-banner" style="background-image: url(../public/kidolshop/images/banner/banner-shop.png)">
+<div class="page-banner" style="background-image: url(../public/watchshop/images/banner/banner-shop.png)">
     <div class="container">
         <div class="page-banner-content text-center">
             <h2 class="title">Chi tiết sản phẩm</h2>
@@ -32,7 +32,7 @@
             <div class="col-lg-6 col-md-8">
                 <div class="shop-image">
                     <div class="shop-single-preview-image">
-                        <img class="product-zoom" src="{{asset('public/storage/kidoldash/images/product/'.$image)}}" alt="">
+                        <img class="product-zoom" src="{{asset('public/storage/watchshopdash/images/product/'.$image)}}" alt="">
                         
                         @if($get_time_sale) 
                             @if($product->QuantityTotal == '0') <span class="sticker-new label-sale">HẾT HÀNG</span>
@@ -43,8 +43,8 @@
                         <div class="swiper-wrapper">
                             @foreach(json_decode($product->ImageName) as $img)
                             <div class="swiper-slide single-product-thumb">
-                                <a class="active" href="#" data-image="{{asset('public/storage/kidoldash/images/product/'.$img)}}">
-                                    <img src="{{asset('public/storage/kidoldash/images/product/'.$img)}}" alt="">
+                                <a class="active" href="#" data-image="{{asset('public/storage/watchshopdash/images/product/'.$img)}}">
+                                    <img src="{{asset('public/storage/watchshopdash/images/product/'.$img)}}" alt="">
                                 </a>
                             </div>
                             @endforeach
@@ -155,12 +155,12 @@
                         <p>Phương thức thanh toán</p>
 
                         <ul class="payment-options">
-                            <li><img src="{{asset('public/kidolshop/images/payment-icon/payment-1.svg')}}" alt=""></li>
-                            <li><img src="{{asset('public/kidolshop/images/payment-icon/payment-2.svg')}}" alt=""></li>
-                            <li><img src="{{asset('public/kidolshop/images/payment-icon/payment-3.svg')}}" alt=""></li>
-                            <li><img src="{{asset('public/kidolshop/images/payment-icon/payment-4.svg')}}" alt=""></li>
-                            <li><img src="{{asset('public/kidolshop/images/payment-icon/payment-5.svg')}}" alt=""></li>
-                            <li><img src="{{asset('public/kidolshop/images/payment-icon/payment-7.svg')}}" alt=""></li>
+                            <li><img src="{{asset('public/watchshop/images/payment-icon/payment-1.svg')}}" alt=""></li>
+                            <li><img src="{{asset('public/watchshop/images/payment-icon/payment-2.svg')}}" alt=""></li>
+                            <li><img src="{{asset('public/watchshop/images/payment-icon/payment-3.svg')}}" alt=""></li>
+                            <li><img src="{{asset('public/watchshop/images/payment-icon/payment-4.svg')}}" alt=""></li>
+                            <li><img src="{{asset('public/watchshop/images/payment-icon/payment-5.svg')}}" alt=""></li>
+                            <li><img src="{{asset('public/watchshop/images/payment-icon/payment-7.svg')}}" alt=""></li>
                         </ul>
                     </div>
 
@@ -322,7 +322,7 @@
                             <div class="product-image">
                                 <?php $image = json_decode($related_product->ImageName)[0];?>
                                 <a href="{{URL::to('/shop-single/'.$related_product->ProductSlug)}}">
-                                    <img src="{{asset('public/storage/kidoldash/images/product/'.$image)}}" alt="">
+                                    <img src="{{asset('public/storage/watchshopdash/images/product/'.$image)}}" alt="">
                                 </a>
 
                                 <?php
@@ -412,22 +412,22 @@
         <div class="brand-active swiper-container">
             <div class="swiper-wrapper">
                 <div class="single-brand swiper-slide">
-                    <img src="{{asset('public/kidolshop/images/brand/brand-1.jpg')}}" alt="">
+                    <img src="{{asset('public/watchshop/images/brand/brand-1.jpg')}}" alt="">
                 </div>
                 <div class="single-brand swiper-slide">
-                    <img src="{{asset('public/kidolshop/images/brand/brand-2.jpg')}}" alt="">
+                    <img src="{{asset('public/watchshop/images/brand/brand-2.jpg')}}" alt="">
                 </div>
                 <div class="single-brand swiper-slide">
-                    <img src="{{asset('public/kidolshop/images/brand/brand-3.jpg')}}" alt="">
+                    <img src="{{asset('public/watchshop/images/brand/brand-3.jpg')}}" alt="">
                 </div>
                 <div class="single-brand swiper-slide">
-                    <img src="{{asset('public/kidolshop/images/brand/brand-4.jpg')}}" alt="">
+                    <img src="{{asset('public/watchshop/images/brand/brand-4.jpg')}}" alt="">
                 </div>
                 <div class="single-brand swiper-slide">
-                    <img src="{{asset('public/kidolshop/images/brand/brand-5.jpg')}}" alt="">
+                    <img src="{{asset('public/watchshop/images/brand/brand-5.jpg')}}" alt="">
                 </div>
                 <div class="single-brand swiper-slide">
-                    <img src="{{asset('public/kidolshop/images/brand/brand-6.jpg')}}" alt="">
+                    <img src="{{asset('public/watchshop/images/brand/brand-6.jpg')}}" alt="">
                 </div>
             </div>
         </div>
@@ -439,7 +439,7 @@
 <script>
     $(document).ready(function(){  
         var idCustomer = '<?php echo Session::get('idCustomer'); ?>';
-        var $Quantity = $('.qty-of-attr').val();
+        var $Quantity = parseInt($('.qty-of-attr').val());
         $("input:radio[name=material]:first").attr('checked', true);
         $('#idProAttr').val($("input:radio[name=material]:first").val());
 

@@ -61,7 +61,7 @@
                                                 <th class="text-center" scope="row">{{$key + 1}}</th>
                                                 <td class="row" style="border-bottom:0;">
                                                         <?php $image = json_decode($bill_info->ImageName)[0]; ?>
-                                                        <img class="avatar-70 rounded" src="{{asset('public/storage/kidoldash/images/product/'.$image)}}" alt="">
+                                                        <img class="avatar-70 rounded" src="{{asset('public/storage/watchshopdash/images/product/'.$image)}}" alt="">
                                                         <div class="ml-2" style="flex:1;">
                                                             <h6 class="mb-0">{{$bill_info->ProductName}}</h6>
                                                             <p class="mb-0">Mã sản phẩm: {{$bill_info->idProduct}}</p>
@@ -134,6 +134,11 @@
                                         <h3 class="text-primary font-weight-700">{{number_format($total_bill,0,',','.')}}đ</h3>
                                     </div>
                                 </div>
+                                @if($address->Payment == 'vnpay')
+                                <div class="col-lg-3 paid_tag">
+                                    <div class="h3 p-3 mb-0 text-primary">Đã thanh toán</div>
+                                </div>
+                                @endif
                             </div>
                         </div>                            
                     </div>

@@ -4,49 +4,49 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>KidolShop</title>
+    <title>watchshop</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- <meta name="csrf-token" content="{{ csrf_token() }}"> -->
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('public/kidolshop/images/favicon.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="">
 
     <!-- CSS
 	============================================ -->
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{asset('public/kidolshop/css/vendor/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('public/watchshop/css/vendor/bootstrap.min.css')}}">
 
     <!-- Icon Font CSS -->
-    <link rel="stylesheet" href="{{asset('public/kidolshop/css/vendor/plazaicon.css')}}">
-    <link rel="stylesheet" href="{{asset('public/kidolshop/css/vendor/themify-icons.css')}}">
-    <link rel="stylesheet" href="{{asset('public/kidolshop/css/vendor/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('public/watchshop/css/vendor/plazaicon.css')}}">
+    <link rel="stylesheet" href="{{asset('public/watchshop/css/vendor/themify-icons.css')}}">
+    <link rel="stylesheet" href="{{asset('public/watchshop/css/vendor/font-awesome.min.css')}}">
 
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="{{asset('public/kidolshop/css/plugins/animate.css')}}">
-    <link rel="stylesheet" href="{{asset('public/kidolshop/css/plugins/swiper-bundle.min.css')}}">
-    <link rel="stylesheet" href="{{asset('public/kidolshop/css/plugins/select2.min.css')}}">
+    <link rel="stylesheet" href="{{asset('public/watchshop/css/plugins/animate.css')}}">
+    <link rel="stylesheet" href="{{asset('public/watchshop/css/plugins/swiper-bundle.min.css')}}">
+    <link rel="stylesheet" href="{{asset('public/watchshop/css/plugins/select2.min.css')}}">
 
     <!-- Helper CSS -->
-    <link rel="stylesheet" href="{{asset('public/kidolshop/css/helper.css')}}">
-    <link rel="stylesheet" href="{{asset('public/kidolshop/css/dataTables.bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('public/kidolshop/css/responsive.bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('public/watchshop/css/helper.css')}}">
+    <link rel="stylesheet" href="{{asset('public/watchshop/css/dataTables.bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('public/watchshop/css/responsive.bootstrap.min.css')}}">
 
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="{{asset('public/kidolshop/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('public/watchshop/css/style.css')}}">
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
     </style>
 
     <!-- Modernizer JS -->
-    <script src="{{asset('public/kidolshop/js/vendor/modernizr-3.6.0.min.js')}}"></script>
+    <script src="{{asset('public/watchshop/js/vendor/modernizr-3.6.0.min.js')}}"></script>
     <!-- jQuery JS -->
-    <script src="{{asset('public/kidolshop/js/vendor/jquery-3.3.1.min.js')}}" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" 
+    <script src="{{asset('public/watchshop/js/vendor/jquery-3.3.1.min.js')}}" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" 
         crossorigin="anonymous">
     </script>
-    <script src="{{asset('public/kidolshop/js/jquery.preloadinator.min.js')}}"></script>
+    <script src="{{asset('public/watchshop/js/jquery.preloadinator.min.js')}}"></script>
 
     <!--====== Use the minified version files listed below for better performance and remove the files listed above ======-->
     <!-- <link rel="stylesheet" href="assets/css/plugins-min/plugins.min.css">
@@ -91,7 +91,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-2">
                             <div class="header-logo">
-                                <a href="{{URL::to('/home')}}"><img src="{{asset('public/kidolshop/images/logo/logo.png')}}" alt=""></a>
+                                <a href="{{URL::to('/home')}}"><img src="{{asset('public/watchshop/images/logo/logo.jpg')}}" alt=""></a>
                             </div>
                         </div>
                         <div class="col-lg-7 position-static">
@@ -133,7 +133,7 @@
                                                 </li>
                                                 <li class="mega-dropdown">
                                                     <a class="menu-banner" href="#">
-                                                        <img src="{{asset('public/kidolshop/images/banner-navbar.jpg')}}" alt="">
+                                                        <img src="{{asset('public/watchshop/images/banner-navbar.jpg')}}" alt="">
                                                     </a>
                                                 </li>
                                             </ul>
@@ -160,7 +160,7 @@
                                     <div class="header-account-list dropdown top-link">
                                         @if(Session::get('idCustomer'))
                                             @if(Session::get('AvatarCus') != '')
-                                            <a href="#" role="button" data-toggle="dropdown"><img style="border-radius:50%;" width="70px" height="24px" src="{{asset('public/storage/kidoldash/images/customer/'.Session::get('AvatarCus'))}}" alt=""></a>
+                                            <a href="#" role="button" data-toggle="dropdown"><img style="border-radius:50%;" width="70px" height="24px" src="{{asset('public/storage/watchshopdash/images/customer/'.Session::get('AvatarCus'))}}" alt=""></a>
                                             @else <a href="#" role="button" data-toggle="dropdown"><i class="icon-users"></i></a> @endif
                                         <ul class="dropdown-menu">
                                             <li><a href="{{URL::to('/account')}}">Tài khoản của tôi</a></li>
@@ -202,7 +202,7 @@
                                                         <div class="single-cart-box">
                                                             <div class="cart-img">
                                                                 <?php $image = json_decode($cart->ImageName)[0]; ?>
-                                                                <a href="{{URL::to('shop-single/'.$cart->ProductSlug)}}"><img src="{{asset('public/storage/kidoldash/images/product/'.$image)}}" alt=""></a>
+                                                                <a href="{{URL::to('shop-single/'.$cart->ProductSlug)}}"><img src="{{asset('public/storage/watchshopdash/images/product/'.$image)}}" alt=""></a>
                                                                 <span class="pro-quantity">{{$cart->QuantityBuy}}</span>
                                                             </div>
                                                             <div class="cart-content">
@@ -236,7 +236,7 @@
                                             </a>
                                             <ul class="dropdown-menu" style="height:250px; width:250px;">
                                                 <li style="height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center;">
-                                                    <img src="{{asset('public/kidolshop/images/no_cart.png')}}" alt="" style="width: 80%;" class="product-image">
+                                                    <img src="{{asset('public/watchshop/images/no_cart.png')}}" alt="" style="width: 80%;" class="product-image">
                                                     <span class="mt-10 d-block text-align-center">Giỏ hàng trống</span>
                                                 </li>
                                             </ul>
@@ -258,7 +258,7 @@
                 <div class="row align-items-center">
                     <div class="col-6">
                         <div class="header-logo">
-                            <a href="{{URL::to('/home')}}"><img src="{{asset('public/kidolshop/images/logo/logo.png')}}" alt=""></a>
+                            <a href="{{URL::to('/home')}}"><img src="{{asset('public/watchshop/images/logo/logo.png')}}" alt=""></a>
                         </div>
                     </div>
                     <div class="col-6">
@@ -267,7 +267,7 @@
                                 <div class="header-account-list dropdown top-link">
                                     @if(Session::get('idCustomer'))
                                         @if(Session::get('AvatarCus') != '')
-                                        <a href="#" role="button" data-toggle="dropdown" style="top:-3px;"><img style="border-radius:50%;" width="24px" height="24px" src="{{asset('public/storage/kidoldash/images/customer/'.Session::get('AvatarCus'))}}" alt=""></a>
+                                        <a href="#" role="button" data-toggle="dropdown" style="top:-3px;"><img style="border-radius:50%;" width="24px" height="24px" src="{{asset('public/storage/watchshopdash/images/customer/'.Session::get('AvatarCus'))}}" alt=""></a>
                                         @else <a href="#" role="button" data-toggle="dropdown"><i class="icon-users"></i></a> @endif
                                     <ul class="dropdown-menu">
                                         <li><a href="{{URL::to('/account')}}">Tài khoản của tôi</a></li>
@@ -309,7 +309,7 @@
                                                     <div class="single-cart-box">
                                                         <div class="cart-img">
                                                             <?php $image = json_decode($cart->ImageName)[0]; ?>
-                                                            <a href="{{URL::to('shop-single/'.$cart->ProductSlug)}}"><img src="{{asset('public/storage/kidoldash/images/product/'.$image)}}" alt=""></a>
+                                                            <a href="{{URL::to('shop-single/'.$cart->ProductSlug)}}"><img src="{{asset('public/storage/watchshopdash/images/product/'.$image)}}" alt=""></a>
                                                             <span class="pro-quantity">{{$cart->QuantityBuy}}</span>
                                                         </div>
                                                         <div class="cart-content">
@@ -343,7 +343,7 @@
                                         </a>
                                         <ul class="dropdown-menu" style="height:250px; width:250px;">
                                             <li style="height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center;">
-                                                <img src="{{asset('public/kidolshop/images/no_cart.png')}}" alt="" style="width: 80%;" class="product-image">
+                                                <img src="{{asset('public/watchshop/images/no_cart.png')}}" alt="" style="width: 80%;" class="product-image">
                                                 <span class="mt-10 d-block text-align-center">Giỏ hàng trống</span>
                                             </li>
                                         </ul>
@@ -420,7 +420,7 @@
                                 </li>
                                 <!-- <li class="mega-dropdown">
                                     <a class="menu-banner" href="#">
-                                        <img src="{{asset('public/kidolshop/images/menu-banner.jpg')}}" alt="">
+                                        <img src="{{asset('public/watchshop/images/menu-banner.jpg')}}" alt="">
                                     </a>
                                 </li> -->
                             </ul>
@@ -462,7 +462,7 @@
                         <!--Footer Widget Start-->
                         <div class="col-lg-4 col-md-6">
                             <div class="footer-widget">
-                                <a class="footer-logo" href="#"><img src="{{asset('public/kidolshop/images/logo/logo.png')}}" alt=""></a>
+                                <a class="footer-logo" href="#"><img src="{{asset('public/watchshop/images/logo/logo.png')}}" alt=""></a>
                                 <div class="footer-widget-text">
                                     <p>A perfect blend of creativity, energy, communication, happiness and love. Let us arrange a smile for you. </p>
                                 </div>
@@ -561,7 +561,7 @@
 
                     <!--Right Start-->
                     <div class="copyright-payment">
-                        <img src="{{asset('public/kidolshop/images/payment.png')}}" alt="">
+                        <img src="{{asset('public/watchshop/images/payment.png')}}" alt="">
                     </div>
                     <!--Right End-->
 
@@ -586,7 +586,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="quick-view-image">
-                                    <img src="{{asset('public/kidolshop/images/product-single/product-1.jpg')}}" alt="">
+                                    <img src="{{asset('public/watchshop/images/product-single/product-1.jpg')}}" alt="">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -683,7 +683,7 @@
                     <div class="modal-body modal-compare-body row">
                         <div class="product-item col-md-3 select-pd" id="product-item-41" data-id="41">
                             <div class="product-image mb-3" id="product-image-41">
-                                <label class="abc" for="chk-pd-41"><img src="{{asset('public/kidolshop/images/no_cart.png')}}" class="rounded w-100 img-fluid"></label>       
+                                <label class="abc" for="chk-pd-41"><img src="{{asset('public/watchshop/images/no_cart.png')}}" class="rounded w-100 img-fluid"></label>       
                                 <div class="product-title">
                                     <div class="product-name" style="height:30px ;overflow:hidden;display:-webkit-box;">
                                         <input type="checkbox" class="checkstatus d-none" id="chk-pd-41" name="chk_product[]" value="41" data-id="41" data-name="Kem chống nắng có màu che phủ tự nhiên Lancome UV Expert BB COMPLETE 2 SPF 50+ PA++++ 30ml – Tone tự nhiên" data-price="1550000" data-img="lc6.png">
@@ -713,32 +713,32 @@
 
 
     <!-- Bootstrap JS -->
-    <script src="{{asset('public/kidolshop/js/vendor/popper.min.js')}}"></script>
-    <script src="{{asset('public/kidolshop/js/vendor/bootstrap.min.js')}}"></script>
+    <script src="{{asset('public/watchshop/js/vendor/popper.min.js')}}"></script>
+    <script src="{{asset('public/watchshop/js/vendor/bootstrap.min.js')}}"></script>
 
     <!-- Plugins JS -->
-    <script src="{{asset('public/kidolshop/js/plugins/swiper-bundle.min.js')}}"></script>
-    <script src="{{asset('public/kidolshop/js/plugins/jquery.countdown.min.js')}}"></script>
-    <script src="{{asset('public/kidolshop/js/plugins/jquery.elevateZoom.min.js')}}"></script>
-    <script src="{{asset('public/kidolshop/js/plugins/select2.min.js')}}"></script>
-    <script src="{{asset('public/kidolshop/js/plugins/ajax-contact.js')}}"></script>
+    <script src="{{asset('public/watchshop/js/plugins/swiper-bundle.min.js')}}"></script>
+    <script src="{{asset('public/watchshop/js/plugins/jquery.countdown.min.js')}}"></script>
+    <script src="{{asset('public/watchshop/js/plugins/jquery.elevateZoom.min.js')}}"></script>
+    <script src="{{asset('public/watchshop/js/plugins/select2.min.js')}}"></script>
+    <script src="{{asset('public/watchshop/js/plugins/ajax-contact.js')}}"></script>
 
 
     <!--====== Use the minified version files listed below for better performance and remove the files listed above ======-->
     <!-- <script src="assets/js/plugins.min.js"></script> -->
 
     <!-- Main JS -->
-    <script src="{{asset('public/kidolshop/js/main.js')}}"></script>
+    <script src="{{asset('public/watchshop/js/main.js')}}"></script>
 
 
     <!-- Google Map js -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ5y0EF8dE6qwc03FcbXHJfXr4vEa7z54"></script>
-    <script src="{{asset('public/kidolshop/js/map-script.js')}}"></script>
-    <script src="{{asset('public/kidoldash/js/form-validate.js')}}"></script>
-    <script src="{{asset('public/kidolshop/js/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('public/kidolshop/js/dataTables.bootstrap4.min.js')}}"></script>
-    <script src="{{asset('public/kidolshop/js/dataTables.responsive.min.js')}}"></script>
-    <script src="{{asset('public/kidolshop/js/responsive.bootstrap.min.js')}}"></script>
+    <script src="{{asset('public/watchshop/js/map-script.js')}}"></script>
+    <script src="{{asset('public/watchshopdash/js/form-validate.js')}}"></script>
+    <script src="{{asset('public/watchshop/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('public/watchshop/js/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('public/watchshop/js/dataTables.responsive.min.js')}}"></script>
+    <script src="{{asset('public/watchshop/js/responsive.bootstrap.min.js')}}"></script>
 
     <!-- Messenger Plugin chat Code -->
     <div id="fb-root"></div>
@@ -810,7 +810,7 @@
                 var _token = $('input[name="_token"]').val();
                 
                 if($('#idCustomer').val() == ""){
-                    window.location.href = '../kidolshop/login';
+                    window.location.href = '../watchshop/login';
                 }else{
                     $.ajax({
                         url: '{{url("/add-to-wishlist")}}',
@@ -898,16 +898,12 @@
                             chk_product = $("input[name='chk_product[]']:checked").map(function () {
                                 return this.value;
                             }).get();
-                            var _token = $('input[name="_token"]').val();
+                            var cmp_pro = '';
 
-                            $.ajax({
-                                url: '{{url("/submit-compare")}}',
-                                method: 'POST',
-                                data: {chk_product:chk_product,idProduct:idProduct, _token:_token},
-                                success:function(data){
-                                    window.location.href = '../kidolshop/compare';
-                                }
-                            });
+                            for(i = 0; i < chk_product.length; i++){  
+                                cmp_pro += ',' + chk_product[i];
+                            }
+                            window.location.href = '../watchshop/compare?product=' +idProduct+cmp_pro;
                         });
                     }
                 });

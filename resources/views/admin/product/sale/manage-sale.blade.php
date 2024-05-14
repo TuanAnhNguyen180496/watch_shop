@@ -35,7 +35,7 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <?php $image = json_decode($sale->ImageName)[0];?>
-                                        <img src="{{asset('public/storage/kidoldash/images/product/'.$image)}}" class="img-fluid rounded avatar-50 mr-3" alt="image">
+                                        <img src="{{asset('public/storage/watchshopdash/images/product/'.$image)}}" class="img-fluid rounded avatar-50 mr-3" alt="image">
                                         <div>{{$sale->ProductName}}</div>
                                     </div>
                                 </td>

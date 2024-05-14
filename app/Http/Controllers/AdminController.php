@@ -147,12 +147,12 @@ class AdminController extends Controller
             $get_name_image = $get_image->getClientOriginalName();
             $name_image = current(explode('.',$get_name_image));
             $new_image = $name_image.rand(0,99).'.'.$get_image->getClientOriginalExtension();
-            $get_image->storeAs('public/kidoldash/images/user',$new_image);
+            $get_image->storeAs('public/watchshopdash/images/user',$new_image);
             $admin->Avatar = $new_image; 
             Session::put('Avatar', $new_image);
 
             $get_old_img = Admin::where('idAdmin', Session::get('idAdmin'))->first();
-            Storage::delete('public/kidoldash/images/user/'.$get_old_img->Avatar);
+            Storage::delete('public/watchshopdash/images/user/'.$get_old_img->Avatar);
         }
 
         $admin->save();
@@ -363,7 +363,7 @@ class AdminController extends Controller
                     <div class="card card-block card-stretch mb-0">
                         <div class="card-body">
                             <div class="bg-warning-light rounded">
-                                <img src="public/storage/kidoldash/images/product/'.$image.'" class="style-img img-fluid m-auto p-3" alt="image">
+                                <img src="public/storage/watchshopdash/images/product/'.$image.'" class="style-img img-fluid m-auto p-3" alt="image">
                             </div>
                             <div class="style-text text-left mt-3">
                                 <h5 class="mb-1 limit-2-lines">'.$topProduct->ProductName.'</h5>

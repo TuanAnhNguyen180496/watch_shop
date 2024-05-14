@@ -10,7 +10,7 @@
                 <div class="card car-transparent">
                     <div class="card-body p-0">
                         <div class="profile-image position-relative">
-                        <img src="public/kidoldash/images/page-img/profile.png" class="img-fluid rounded w-100" alt="profile-image">
+                        <img src="public/watchshopdash/images/page-img/profile.png" class="img-fluid rounded w-100" alt="profile-image">
                         </div>
                     </div>
                 </div>
@@ -23,9 +23,9 @@
                         <div class="d-flex align-items-center mb-3">
                             <div class="profile-img position-relative">
                                 @if(Session::get('Avatar') != NULL)
-                                    <img src="public/storage/kidoldash/images/user/<?php echo Session::get('Avatar')?>" class="img-fluid rounded avatar-110" alt="profile-image">
+                                    <img src="public/storage/watchshopdash/images/user/<?php echo Session::get('Avatar')?>" class="img-fluid rounded avatar-110" alt="profile-image">
                                 @else
-                                    <img src="public/kidoldash/images/user/12.jpg" class="img-fluid rounded avatar-110" alt="profile-image">
+                                    <img src="public/watchshopdash/images/user/12.jpg" class="img-fluid rounded avatar-110" alt="profile-image">
                                 @endif
                             </div>
                             <div class="ml-3">

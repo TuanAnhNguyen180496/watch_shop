@@ -56,7 +56,7 @@ class BlogController extends Controller
             $get_name_image = $image->getClientOriginalName();
             $name_image = current(explode('.',$get_name_image));
             $new_image = $name_image.rand(0,99).'.'.$image->getClientOriginalExtension();
-            $image->storeAs('public/kidoldash/images/blog',$new_image);
+            $image->storeAs('public/watchshopdash/images/blog',$new_image);
             $blog->BlogImage = $new_image;
             
             $blog->save();
@@ -79,11 +79,11 @@ class BlogController extends Controller
                 $get_name_image = $image->getClientOriginalName();
                 $name_image = current(explode('.',$get_name_image));
                 $new_image = $name_image.rand(0,99).'.'.$image->getClientOriginalExtension();
-                $image->storeAs('public/kidoldash/images/blog',$new_image);
+                $image->storeAs('public/watchshopdash/images/blog',$new_image);
                 $blog->BlogImage = $new_image;
 
                 $get_old_img = Blog::where('idBlog', $idBlog)->first();
-                Storage::delete('public/kidoldash/images/blog/'.$get_old_img->BlogImage);
+                Storage::delete('public/watchshopdash/images/blog/'.$get_old_img->BlogImage);
             }
             $blog->save();
             return redirect()->back()->with('message', 'Sửa bài viết thành công');

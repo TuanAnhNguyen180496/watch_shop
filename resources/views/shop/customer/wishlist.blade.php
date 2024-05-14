@@ -2,7 +2,7 @@
 @section('content')
 
 <!--Page Banner Start-->
-<div class="page-banner" style="background-image: url(public/kidolshop/images/spbn.png);">
+<div class="page-banner" style="background-image: url(public/watchshop/images/spbn.png);">
     <div class="container">
         <div class="page-banner-content text-center">
             <h2 class="title">Danh Sách Yêu Thích</h2>
@@ -38,7 +38,7 @@
                                     <td class="text-center">{{$key+1}}</td>
                                     <?php $image = json_decode($wish->ImageName)[0]; ?>
                                     <td>
-                                        <a href="{{URL::to('/shop-single/'.$wish->ProductSlug)}}"><img src="{{asset('public/storage/kidoldash/images/product/'.$image)}}" alt=""></a>
+                                        <a href="{{URL::to('/shop-single/'.$wish->ProductSlug)}}"><img src="{{asset('public/storage/watchshopdash/images/product/'.$image)}}" alt=""></a>
                                     </td>
                                     <td>
                                         <div><a href="{{URL::to('/shop-single/'.$wish->ProductSlug)}}">{{$wish->ProductName}}</a></div>

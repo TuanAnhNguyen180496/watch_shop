@@ -4,7 +4,7 @@
 <?php use Illuminate\Support\Facades\Session; ?>
 
 <!--Page Banner Start-->
-<div class="page-banner" style="background-image: url(../public/kidolshop/images/oso.png);">
+<div class="page-banner" style="background-image: url(../public/watchshop/images/oso.png);">
     <div class="container">
         <div class="page-banner-content text-center">
             <h2 class="title">Chi Tiết Đơn Hàng</h2>
@@ -54,7 +54,7 @@
                     <tr class="product-item">
                         <?php $image = json_decode($bill_info->ImageName)[0]; ?>
                         <td class="image">
-                            <a href="{{URL::to('/shop-single/'.$bill_info->ProductSlug)}}"><img src="{{asset('public/storage/kidoldash/images/product/'.$image)}}" alt=""></a>
+                            <a href="{{URL::to('/shop-single/'.$bill_info->ProductSlug)}}"><img src="{{asset('public/storage/watchshopdash/images/product/'.$image)}}" alt=""></a>
                         </td>
                         <td class="product">
                             <a href="{{URL::to('/shop-single/'.$bill_info->ProductSlug)}}">{{$bill_info->ProductName}}</a>
@@ -76,7 +76,7 @@
                     <div class="cart-title">
                         <h4 class="title">Tổng giỏ hàng</h4>
                     </div>
-                    <div class="cart-total-table mt-25">
+                    <div class="cart-total-table mt-25" style="position:relative;">
                         <table class="table">
                             <tbody>
                                 <tr>
@@ -123,6 +123,11 @@
                                 <input type="hidden" name="idVoucher" class="idVoucher" value="0">                                
                             </tbody>
                         </table>
+                        @if($address->Payment == 'vnpay')
+                        <div class="col-lg-3 paid_tag">
+                            <div class="h3 p-3 mb-0 text-primary">Đã thanh toán</div>
+                        </div>
+                        @endif
                     </div>
                     <!-- <div class="container__address-content">
                         <div class="container__address-content-hd">

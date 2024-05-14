@@ -59,9 +59,11 @@
                             <div class="col-md-12">                                    
                                 <label>Sản phẩm</label>
                                 <div class="row form-group list-product">
-                                    <a href="#" class="col-md-2 btn add-btn shadow-none d-none d-md-block add-product" data-toggle="modal" data-target="#select-products">
-                                        <i class="las la-plus mr-2" style="font-size:24px;"></i>
-                                        <br><span>Thêm Sản Phẩm</span>
+                                    <a href="#" class="col-md-2 btn add-btn shadow-none d-none d-md-block" style="padding:15px;" data-toggle="modal" data-target="#select-products">
+                                        <div class="add-product">
+                                            <i class="las la-plus mr-2" style="font-size:24px;"></i>
+                                            <br><span>Thêm Sản Phẩm</span>
+                                        </div>    
                                     </a>
                                 </div>
                             </div>
@@ -91,7 +93,7 @@
                     <div class="product-image mb-3" id="product-image-{{$product->idProduct}}">
 
                         <?php $image = json_decode($product->ImageName)[0];?>
-                        <label for="chk-pd-{{$product->idProduct}}"><img src="{{asset('public/storage/kidoldash/images/product/'.$image)}}" class="rounded w-100 img-fluid"/></label>
+                        <label for="chk-pd-{{$product->idProduct}}"><img src="{{asset('public/storage/watchshopdash/images/product/'.$image)}}" class="rounded w-100 img-fluid"/></label>
 
                         <div class="product-title">
                             <div class="product-name">
@@ -159,7 +161,7 @@
                 $(document).ready(function(){
                     $("#confirm").click(function(){
                         if($(".list-product > #product-list-item-"+product_id).length < 1)
-                        $(".list-product").append('<div class="product-item col-md-2" id=product-list-item-'+ product_id +'><div class="product-image" id=product-list-image-'+ product_id +'><img src="public/storage/kidoldash/images/product/'+ product_img +'" class="rounded w-100 img-fluid"><div class="product-title"><div class="product-name"><span>'+product_name+'</span></div></div></div></div>');
+                        $(".list-product").append('<div class="product-item col-md-2" id=product-list-item-'+ product_id +'><div class="product-image" id=product-list-image-'+ product_id +'><img src="public/storage/watchshopdash/images/product/'+ product_img +'" class="rounded w-100 img-fluid"><div class="product-title"><div class="product-name"><span>'+product_name+'</span></div></div></div></div>');
                     })
                 })
             }
@@ -172,6 +174,12 @@
                     })
                 })
             }
+        });
+
+        $("#confirm").click(function(){
+            var $fields = $("#form-add-sale").find('input[name="chk_product[]"]:checked');
+            if (!$fields.length) $(".add-product").css("height","162px");
+            else $(".add-product").css("height","100%");
         });
 
         $('#form-add-sale').submit(function() {

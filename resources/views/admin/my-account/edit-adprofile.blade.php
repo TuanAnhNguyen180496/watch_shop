@@ -60,9 +60,9 @@
                                             <div class="profile-img-edit">
                                                 <div class="crm-profile-img-edit">
                                                     @if(Session::get('Avatar') != NULL)
-                                                        <img class="crm-profile-pic rounded-circle avatar-100 replace-avt" src="public/storage/kidoldash/images/user/<?php echo Session::get('Avatar')?>" alt="profile-pic">
+                                                        <img class="crm-profile-pic rounded-circle avatar-100 replace-avt" src="public/storage/watchshopdash/images/user/<?php echo Session::get('Avatar')?>" alt="profile-pic">
                                                     @else
-                                                        <img class="crm-profile-pic rounded-circle avatar-100 replace-avt" src="public/kidoldash/images/user/12.jpg" alt="profile-pic">
+                                                        <img class="crm-profile-pic rounded-circle avatar-100 replace-avt" src="public/watchshopdash/images/user/12.jpg" alt="profile-pic">
                                                     @endif
                                                     <div class="crm-p-image bg-primary">
                                                         <i class="las la-pen upload-button"></i>

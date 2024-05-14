@@ -23,7 +23,7 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-center mb-4 card-total-sale">
                                     <div class="icon iq-icon-box-2 bg-info-light">
-                                        <img src="public/kidoldash/images/product/1.png" class="img-fluid" alt="image">
+                                        <img src="public/watchshopdash/images/product/1.png" class="img-fluid" alt="image">
                                     </div>
                                     <div>
                                         <p class="mb-2">Tổng Doanh Thu</p>
@@ -43,7 +43,7 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-center mb-4 card-total-sale">
                                     <div class="icon iq-icon-box-2 bg-success-light">
-                                        <img src="public/kidoldash/images/product/3.png" class="img-fluid" alt="image">
+                                        <img src="public/watchshopdash/images/product/3.png" class="img-fluid" alt="image">
                                     </div>
                                     <div>
                                         <p class="mb-2">Tổng Sản Phầm Bán Ra</p>
@@ -123,7 +123,7 @@
                                     <div class="card-body">
                                         <div class="bg-warning-light rounded">
                                             <?php $image = json_decode($topProduct->ImageName)[0];?>
-                                            <img src="{{asset('public/storage/kidoldash/images/product/'.$image)}}" class="style-img img-fluid m-auto p-3" alt="image">
+                                            <img src="{{asset('public/storage/watchshopdash/images/product/'.$image)}}" class="style-img img-fluid m-auto p-3" alt="image">
                                         </div>
                                         <div class="style-text text-left mt-3">
                                             <h5 class="mb-1 limit-2-lines">{{$topProduct->ProductName}}</h5>
@@ -151,7 +151,7 @@
                         <div class="d-flex align-items-top">
                             <div class="iq-avatar d-flex align-items-center">
                                 <?php $image = json_decode($topProduct_AllTime->ImageName)[0];?>
-                                <img src="{{asset('public/storage/kidoldash/images/product/'.$image)}}" class="p-0 avatar-100 style-img img-fluid m-auto rounded" alt="image">
+                                <img src="{{asset('public/storage/watchshopdash/images/product/'.$image)}}" class="p-0 avatar-100 style-img img-fluid m-auto rounded" alt="image">
                             </div>
                             <div class="style-text text-left">
                                 <h5 class="mb-2 limit-2-lines">{{$topProduct_AllTime->ProductName}}</h5>
