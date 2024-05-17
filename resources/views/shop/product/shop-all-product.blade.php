@@ -3,7 +3,7 @@
 
 
 <!--Page Banner Start-->
-<div class="page-banner" style="background-image: url(public/watchshop/images/banner/banner-shop.png);">
+<div class="page-banner-product " style="background-color: coral;">
     <div class="container">
         <div class="page-banner-content text-center">
             <h2 class="title">Cửa Hàng</h2>
@@ -325,9 +325,9 @@
                     <!--Sidebar Size End-->
 
                     <!--Sidebar Size Start-->
-                    <div class="sidebar-banner">
+                    <!--<div class="sidebar-banner">
                         <a href="#"><img src="public/watchshop/images/banner-top-pd.png" alt=""></a>
-                    </div>
+                    </div>-->
                     <!--Sidebar Size End-->
 
 

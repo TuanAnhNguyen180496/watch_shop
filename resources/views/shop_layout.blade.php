@@ -810,7 +810,7 @@
                 var _token = $('input[name="_token"]').val();
                 
                 if($('#idCustomer').val() == ""){
-                    window.location.href = '../watchshop/login';
+                    window.location.href = '../login';
                 }else{
                     $.ajax({
                         url: '{{url("/add-to-wishlist")}}',
@@ -874,10 +874,10 @@
                                 $(this).prop('checked', false);
                             }else{
                                 if($(this).is(":checked")){
-                                    $("#product-image-"+product_id).css("border","#f379a7 3px solid");
+                                    $("#product-image-"+product_id).css("border","#212529 3px solid");
                                     $("#product-image-"+product_id).css("border-radius","10px");
                                     $(".btn-compare").css("pointer-events","auto");
-                                    $(".btn-compare").css("background-color","#f379a7");
+                                    $(".btn-compare").css("background-color","#212529");
                                     $("#product-"+product_id).val(product_id);
                                 }
                                 else if($(this).is(":not(:checked)")){
