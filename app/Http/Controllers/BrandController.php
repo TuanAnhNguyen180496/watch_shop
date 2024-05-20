@@ -76,7 +76,7 @@ class BrandController extends Controller
                 return redirect()->back()->with('error', 'Tên thương hiệu này đã tồn tại');
             }else{
                 $brand->BrandName = $data['BrandName'];
-                $brand->BrandSlug = $data['BrandSlug'];
+                $brand->BrandSlug = $data['BrandName'];
                 $brand->save();
                 return redirect()->back()->with('message', 'Sửa thương hiệu thành công');
             }

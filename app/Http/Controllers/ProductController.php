@@ -125,7 +125,7 @@ class ProductController extends Controller
                 $product->QuantityTotal = $data['QuantityTotal'];
                 $product->ShortDes = $data['ShortDes'];
                 $product->DesProduct = $data['DesProduct'];
-                $product->ProductSlug = $data['ProductSlug'];
+                $product->ProductSlug = $data['ProductName'];
                 $get_image = $request->file('ImageName');
                 $timestamp = now();
                 
