@@ -37,7 +37,7 @@
                                 <input type="hidden" name="BrandSlug" value="{{$select_brand->BrandSlug}}" class="form-control" id="convert_slug">
                             </div>    
                         </div>                             
-                        <input type="submit" class="btn btn-primary mr-2" value="Sửa thương hiệu">
+                        <input type="submit" class="btn btn-primary mr-2" value="Cập Nhật">
                         <a href="{{URL::to('/manage-brand')}}" class="btn btn-light mr-2">Trở Về</a>
                     </form>
                 </div>

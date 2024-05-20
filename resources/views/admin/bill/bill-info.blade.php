@@ -102,7 +102,7 @@
                                             <h6>Phí vận chuyển (Miễn phí vận chuyển cho đơn hàng trên 1.000.000đ)</h6>
                                         </div>
                                         <div class="mb-2 col-lg-2 text-right">
-                                            <h6>@if($ship > 0) {{number_format($ship,0,',','.')}}đ
+                                            <h6>@if($ship > 0) {{number_format((double)$ship,0,',','.')}}đ
                                                 @else {{$ship}} @endif
                                             </h6>
                                         </div>

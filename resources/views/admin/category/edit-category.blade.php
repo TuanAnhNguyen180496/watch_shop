@@ -37,7 +37,7 @@
                                 <input type="hidden" name="CategorySlug" value="{{$select_category->CategorySlug}}" class="form-control" id="convert_slug">
                             </div>    
                         </div>                             
-                        <input type="submit" class="btn btn-primary mr-2" value="Sửa danh mục">
+                        <input type="submit" class="btn btn-primary mr-2" value="Cập nhật">
                         <a href="{{URL::to('/manage-category')}}" class="btn btn-light mr-2">Trở Về</a>
                     </form>
                 </div>

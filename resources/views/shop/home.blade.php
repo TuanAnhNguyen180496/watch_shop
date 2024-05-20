@@ -7,13 +7,9 @@
     <div class="swiper-container slider-active">
         <div class="swiper-wrapper">
             <!--Single Slider Start-->
-            <div class="single-slider swiper-slide animation-style-01" style="background-image: url('public/watchshop/images/slider/KIDOLBanner.png');">
+            <div class="single-slider swiper-slide animation-style-01" style="background-image: url('public/watchshop/images/slider/slide2.avif');">
                 <div class="container">
                     <div class="slider-content">
-                        <h5 class="sub-title">Nhập: <span class="text-primary">SALE100K</span> <br> Giảm 100K cho mọi đơn hàng</h5>
-                        <h2 class="main-title">Ngày đặc biệt!</h2>
-                        <p>Nhập: <span class="text-primary">SALE10</span> để được giảm 10%, số lượng có hạn!</p>
-
                         <ul class="slider-btn">
                             <li><a href="{{URL::to('/store')}}" class="btn btn-round btn-primary">Bắt đầu mua sắm</a></li>
                         </ul>
@@ -23,13 +19,9 @@
             <!--Single Slider End-->
 
             <!--Single Slider Start-->
-            <div class="single-slider swiper-slide animation-style-01" style="background-image: url('public/watchshop/images/slider/KIDOLBanner2.png');">
+            <div class="single-slider swiper-slide animation-style-01" style="background-image: url('public/watchshop/images/slider/slide1.avif');">
                 <div class="container" style="text-align:right;">
                     <div class="slider-content">
-                        <h5 class="sub-title sub-title-right">Nhập: <span class="text-info">SALE100K</span> <br> Giảm 100K cho mọi đơn hàng</h5>
-                        <h2 class="main-title">Ngày đặc biệt!</h2>
-                        <p>Nhập: <span class="text-info">SALE10</span> để được giảm 10%, số lượng có hạn!</p>
-
                         <ul class="slider-btn">
                             <li><a href="{{URL::to('/store')}}" class="btn btn-round btn-primary">Bắt đầu mua sắm</a></li>
                         </ul>
@@ -339,7 +331,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="about-image">
-                    <img src="public/watchshop/images/banner/banner_home.png" alt="">
+                    <img src="public/watchshop/images/banner/bannerhome.png" alt="mua ngay">
                 </div>
             </div>
             <div class="col-lg-6">

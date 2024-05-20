@@ -12,7 +12,7 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <div class="header-title">
-                            <h4 class="card-title">Sửa sản phẩm</h4>
+                            <h4 class="card-title">Cập nhật</h4>
                         </div>
                     </div>
                     <?php
@@ -134,7 +134,7 @@
                                 </div>
                             </div>
                         </div>                            
-                        <input type="submit" class="btn btn-primary mr-2" id="btn-submit" value="Sửa sản phẩm">
+                        <input type="submit" class="btn btn-primary mr-2" id="btn-submit" value="Cập nhật">
                         <a href="{{URL::to('/manage-products')}}" class="btn btn-light">Trở về</a>
                     </div>
                 </div>

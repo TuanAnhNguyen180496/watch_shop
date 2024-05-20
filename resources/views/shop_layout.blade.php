@@ -58,7 +58,7 @@
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" class="preloader-deactive">
     <div class="main-wrapper">
         <!--Top Notification Start-->
-        <div class="top-notification-bar text-center">
+        <!-- <div class="top-notification-bar text-center">
             <div class="container">
                 <div class="notification-entry">
                     <p>Nhập: SALE10 giảm 10% cho mọi đơn hàng. <a href="{{URL::to('/store')}}">Mua ngay!</a></p>
@@ -67,7 +67,7 @@
             <div class="notification-close">
                 <button class="notification-close-btn"><i class="fa fa-times"></i></button>
             </div>
-        </div>
+        </div> -->
         <!--Top Notification End-->
 
         <div class="preloader js-preloader flex-center">
@@ -133,14 +133,14 @@
                                                 </li>
                                                 <li class="mega-dropdown">
                                                     <a class="menu-banner" href="#">
-                                                        <img src="{{asset('public/watchshop/images/banner-navbar.jpg')}}" alt="">
+                                                        <!-- <img src="{{asset('public/watchshop/images/banner-navbar.jpg')}}" alt=""> -->
                                                     </a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li><a href="{{URL::to('/blog')}}">Tin tức</a></li>
-                                        <li><a href="{{URL::to('/about-us')}}">Về chúng tôi</a></li>
-                                        <li><a href="{{URL::to('/contact')}}">Liên hệ</a></li>
+                                        <!-- <li><a href="{{URL::to('/about-us')}}">Về chúng tôi</a></li>
+                                        <li><a href="{{URL::to('/contact')}}">Liên hệ</a></li> -->
                                     </ul>
                                 </nav>
                             </div>
@@ -480,15 +480,15 @@
 
                         <div class="col-lg-2 col-md-4 col-sm-6">
                             <div class="footer-widget">
-                                <h4 class="footer-widget-title">Information</h4>
+                                <h4 class="footer-widget-title">Chăm sóc khách hàng</h4>
 
                                 <div class="footer-widget-menu">
                                     <ul>
-                                        <li><a href="#">Search Terms</a></li>
-                                        <li><a href="#">Advanced Search</a></li>
-                                        <li><a href="#">Helps & Faqs</a></li>
-                                        <li><a href="#">Store Location</a></li>
-                                        <li><a href="#">Orders & Returns</a></li>
+                                        <li><a href="#">Hướng dẫn mua hàng</a></li>
+                                        <li><a href="#">Chính sách đổi trả</a></li>
+                                        <li><a href="#">Chính sách bảo hành</a></li>
+                                        <li><a href="#">Dịch vụ và sửa chữa</a></li>
+                                        <!-- <li><a href="#">Orders & Returns</a></li> -->
                                     </ul>
                                 </div>
                             </div>
@@ -496,21 +496,21 @@
 
                         <div class="col-lg-2 col-md-4 col-sm-6">
                             <div class="footer-widget">
-                                <h4 class="footer-widget-title">My Account</h4>
+                                <h4 class="footer-widget-title">Tiện ích</h4>
 
                                 <div class="footer-widget-menu">
                                     <ul>
-                                        <li><a href="#">Delivery</a></li>
-                                        <li><a href="#">Legal Notice</a></li>
-                                        <li><a href="#">Secure payment</a></li>
-                                        <li><a href="#">Sitemap</a></li>
-                                        <li><a href="about.html">About us</a></li>
+                                        <li><a href="#">Tin Tức và sự kiện</a></li>
+                                        <li><a href="#">Tuyển dụng</a></li>
+                                        <li><a href="#">Thanh toán</a></li>
+                                        <li><a href="#">Mua hàng onile</a></li>
+                                        <li><a href="">Mua hàng trả góp</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-2 col-md-4 col-sm-6">
+                        <!-- <div class="col-lg-2 col-md-4 col-sm-6">
                             <div class="footer-widget">
                                 <h4 class="footer-widget-title">Help</h4>
 
@@ -524,7 +524,7 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="col-lg-2 col-md-4 col-sm-6">
                             <div class="footer-widget">
@@ -749,7 +749,7 @@
 
     <script>
       var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "102364102626836");
+      chatbox.setAttribute("page_id", "61559911829658");
       chatbox.setAttribute("attribution", "biz_inbox");
     </script>
 
@@ -757,6 +757,8 @@
     <script>
       window.fbAsyncInit = function() {
         FB.init({
+            appId            : '1678638095724206', // REPLACE IF YOU WANT TO USE YOUR OWN FB APP
+          autoLogAppEvents : true,
           xfbml            : true,
           version          : 'v15.0'
         });
@@ -810,7 +812,7 @@
                 var _token = $('input[name="_token"]').val();
                 
                 if($('#idCustomer').val() == ""){
-                    window.location.href = '../watchshop/login';
+                    window.location.href = '../login';
                 }else{
                     $.ajax({
                         url: '{{url("/add-to-wishlist")}}',
@@ -874,10 +876,10 @@
                                 $(this).prop('checked', false);
                             }else{
                                 if($(this).is(":checked")){
-                                    $("#product-image-"+product_id).css("border","#f379a7 3px solid");
+                                    $("#product-image-"+product_id).css("border","#212529 3px solid");
                                     $("#product-image-"+product_id).css("border-radius","10px");
                                     $(".btn-compare").css("pointer-events","auto");
-                                    $(".btn-compare").css("background-color","#f379a7");
+                                    $(".btn-compare").css("background-color","#212529");
                                     $("#product-"+product_id).val(product_id);
                                 }
                                 else if($(this).is(":not(:checked)")){
