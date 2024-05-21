@@ -50,7 +50,7 @@ class BlogController extends Controller
             $blog->BlogContent = $data['BlogContent'];
             $blog->Status = $data['Status'];
             $blog->BlogDesc = $data['BlogDesc'];
-            $blog->BlogSlug = $data['BlogSlug'];
+            $blog->BlogSlug = $data['BlogTitle'];
             
             $image = $request->file('BlogImage');
             $get_name_image = $image->getClientOriginalName();
